@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+}
+
+.fullscreen {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 50%, #7c3aed 100%);
+}
+
+.fullscreen h1 {
+  color: #fff;
+  font-size: clamp(3rem, 12vw, 8rem);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-shadow: 0 4px 24px rgba(124, 58, 237, 0.6);
+}
+CSSM
+
+rmdir /Users/didi/dchat-workplace/portfolio-site/js /Users/didi/dchat-workplace/portfolio-site/assets 2>/dev/null
+echo "--- files ---"
+find /Users/didi/dchat-workplace/portfolio-site -type f | sort
