@@ -3,12 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>豆能飞</title>
+  <meta name="theme-color" content="#f3f0e7" />
+  <meta name="description" content="《登山豆》——豆。一首小诗，一纸山水。" />
+  <title>登山豆 · 豆</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <main class="fullscreen">
-    <h1>豆能飞</h1>
+  <main class="landscape">
+    <div class="sun" aria-hidden="true"></div>
+    <span class="margin-note" aria-hidden="true">山间有诗</span>
+    <svg class="mountains" viewBox="0 0 1440 680" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1">
+          <stop stop-color="#56655e" stop-opacity=".45" />
+          <stop offset="1" stop-color="#78857a" stop-opacity=".03" />
+        </linearGradient>
+        <filter id="wash" x="-10%" y="-15%" width="120%" height="130%">
+          <feTurbulence type="fractalNoise" baseFrequency=".012 .035" numOctaves="3" seed="8" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="16" />
+          <feGaussianBlur stdDeviation="1.2" />
+        </filter>
+      </defs>
+      <g filter="url(#wash)" fill="url(#ink)">
+        <path opacity=".32" d="M-80 430 40 345 95 362 208 211 249 246 290 205 416 397 500 343 590 435 720 361 860 434 981 285 1014 314 1110 173 1168 259 1212 230 1320 374 1450 290 1520 680H-80Z" />
+        <path opacity=".5" d="M-80 500 62 430 126 303 166 327 222 282 303 405 350 389 466 514 596 482 730 553 868 464 950 481 1088 345 1120 380 1190 306 1318 440 1380 416 1520 483V680H-80Z" />
+        <path opacity=".72" d="M-80 564 45 513 93 454 161 494 230 422 282 498 338 473 440 568 555 592 712 612 906 566 1040 582 1185 493 1233 526 1350 402 1436 463 1520 441V680H-80Z" />
+      </g>
+      <g fill="none" stroke="#536058" stroke-width="1.5" opacity=".45" stroke-linecap="round">
+        <path d="M1080 225q7-5 14 1q7-7 14-4" />
+        <path d="M1118 208q5-3 10 1q5-5 10-3" />
+      </g>
+    </svg>
+    <article class="poem" aria-labelledby="poem-title">
+      <header>
+        <p class="eyebrow" aria-hidden="true">一 纸 山 水 · 一 首 小 诗</p>
+        <h1 id="poem-title">《登山豆》</h1>
+        <p class="author">——豆</p>
+      </header>
+      <div class="verses">
+        <p>登山豆，豆登山，</p>
+        <p>登山豆豆豆登山。</p>
+        <p>山中有个豆中餐，</p>
+        <p>我揪豆豆的大山，</p>
+        <p>大山被我揪豆按。</p>
+      </div>
+      <div class="seal" aria-hidden="true">豆</div>
+    </article>
+    <footer aria-hidden="true"><span></span>山高水长，豆亦悠然<span></span></footer>
   </main>
 </body>
 </html>

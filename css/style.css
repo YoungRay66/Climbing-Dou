@@ -1,35 +1,31 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* { box-sizing: border-box; }
+html { min-height: 100%; background: #f3f0e7; }
+body { margin: 0; color: #303a33; font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "SimSun", serif; -webkit-font-smoothing: antialiased; }
+.landscape { position: relative; isolation: isolate; min-height: 100svh; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 76px 24px 60px; background: radial-gradient(ellipse at 50% 35%, #fbf9f1 0%, #f3f0e7 65%, #e9e8dc 100%); }
+.landscape::after { content: ""; position: absolute; z-index: 3; inset: 0; pointer-events: none; opacity: .16; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%238b816b' filter='url(%23n)' opacity='.4' d='M0 0h180v180H0z'/%3E%3C/svg%3E"); }
+.sun { position: absolute; z-index: -1; top: 16%; right: 21%; width: clamp(55px, 7vw, 100px); aspect-ratio: 1; border-radius: 50%; background: #b9674c; opacity: .14; filter: blur(1px); }
+.margin-note { position: absolute; top: 64px; left: 5%; writing-mode: vertical-rl; letter-spacing: .4em; font-size: 13px; color: #7e8575; }
+.margin-note::after { content: ""; display: block; height: 64px; width: 1px; margin: 20px auto 0; background: #a2a68f; opacity: .5; }
+.mountains { position: absolute; z-index: -1; bottom: 0; left: 0; width: 100%; height: min(74vh, 680px); }
+.poem { text-align: center; animation: arrive 1.4s ease-out both; }
+.eyebrow { margin: 0 0 32px; color: #858775; font-size: 11px; letter-spacing: .25em; }
+h1 { margin: 0; font-family: "Kaiti SC", "STKaiti", "KaiTi", "Songti SC", serif; font-size: clamp(38px, 5vw, 58px); font-weight: 500; letter-spacing: .12em; text-indent: .12em; }
+.author { margin: 14px 6px 36px 0; text-align: right; font-size: 17px; color: #6c7265; letter-spacing: .16em; }
+.verses { font-size: clamp(21px, 2.4vw, 27px); letter-spacing: .17em; line-height: 2.15; }
+.verses p { margin: 0; }
+.seal { display: grid; place-items: center; width: 34px; height: 36px; margin: 32px auto 0; border: 1px solid #a44e3c; outline: 1px solid #a44e3c; outline-offset: -4px; border-radius: 3px 1px 4px 2px; color: #a44e3c; font-family: "Kaiti SC", "STKaiti", "KaiTi", serif; font-size: 23px; transform: rotate(-5deg); opacity: .85; }
+footer { display: flex; align-items: center; gap: 15px; margin-top: 54px; color: #7a8174; font-size: 11px; letter-spacing: .22em; }
+footer span { width: 26px; height: 1px; background: currentColor; opacity: .35; }
+@keyframes arrive { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 600px) {
+  .landscape { padding: 64px 20px 36px; }
+  .margin-note { top: 28px; left: 22px; font-size: 10px; }
+  .margin-note::after { height: 36px; }
+  .sun { right: 9%; top: 17%; }
+  .eyebrow { font-size: 9px; margin-bottom: 28px; }
+  .author { margin-bottom: 30px; font-size: 15px; }
+  .verses { letter-spacing: .1em; line-height: 2.2; }
+  .mountains { width: 180%; left: -40%; height: 55%; opacity: .8; }
+  footer { margin-top: 44px; font-size: 10px; }
 }
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
-}
-
-.fullscreen {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 50%, #7c3aed 100%);
-}
-
-.fullscreen h1 {
-  color: #fff;
-  font-size: clamp(3rem, 12vw, 8rem);
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  text-shadow: 0 4px 24px rgba(124, 58, 237, 0.6);
-}
-CSSM
-
-rmdir /Users/didi/dchat-workplace/portfolio-site/js /Users/didi/dchat-workplace/portfolio-site/assets 2>/dev/null
-echo "--- files ---"
-find /Users/didi/dchat-workplace/portfolio-site -type f | sort
+@media (prefers-reduced-motion: reduce) { .poem { animation: none; } }
